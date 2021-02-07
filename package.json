@@ -1,10 +1,10 @@
 {
-  "name": "react-hooks-utils",
+  "name": "react-hooks-utilities",
   "version": "1.0.0",
   "description": "Just some react hooks utils... (WIP)",
   "author": "johnnyboi91",
   "license": "MIT",
-  "repository": "johnnyboi91/react-hooks-utils",
+  "repository": "johnnyboi91/react-hooks-utilities",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
