@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-left: 1px solid rgba(0, 0, 0, .075);
+  border-right: 1px solid rgba(0, 0, 0, .075);
+  border-bottom: 1px solid rgba(0, 0, 0, .075);
+}
+
+.wrapper * {
+  box-sizing: border-box;
+}
+
+.component {
+  width: 100%;
+  padding: 30px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, .025);
+}
+
+.component p {
+  margin: 5px 0;
+}
+
+.component h2 {
+  margin-top: 0;
+}
