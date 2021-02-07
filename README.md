@@ -1,11 +1,9 @@
-# react-hooks-utils
-
 > Just some react hooks utils... (WIP)
 
 ## Install
 
 ```bash
-npm install --save react-hooks-utils
+npm install --save react-hooks-utilities
 ```
 
 ## Usage
@@ -13,7 +11,7 @@ npm install --save react-hooks-utils
 ### useStateWithCb:
 ```jsx
 import React from 'react'
-import { useStateWithCb } from 'react-hooks-utils'
+import { useStateWithCb } from 'react-hooks-utilities'
 
 function testCallback(value) {
     const el = document.getElementById('test')
@@ -37,7 +35,7 @@ function Example() {
 ### useDimensions:
 ```jsx
 import React from 'react'
-import { useDimensions } from 'react-hooks-utils'
+import { useDimensions } from 'react-hooks-utilities'
 
 function Example() {
     const {
@@ -57,7 +55,7 @@ function Example() {
 ### useWindowDimensions:
 ```jsx
 import React from 'react'
-import { useWindowDimensions } from 'react-hooks-utils'
+import { useWindowDimensions } from 'react-hooks-utilities'
 
 function Example() {
     const {
