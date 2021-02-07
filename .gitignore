@@ -17,6 +17,8 @@ dist
 .env.test.local
 .env.production.local
 
+.idea
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
