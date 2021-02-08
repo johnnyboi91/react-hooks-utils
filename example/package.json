@@ -1,6 +1,6 @@
 {
-  "name": "react-hooks-utils-example",
-  "homepage": ".",
+  "name": "react-hooks-utilities-example",
+  "homepage": "https://johnnyboi91.github.io/react-hooks-utilities/",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
-    "react-hooks-utils": "file:.."
+    "react-hooks-utilities": "file:.."
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
@@ -26,5 +26,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "utilities",
+    "utils",
+    "helpers"
   ]
 }

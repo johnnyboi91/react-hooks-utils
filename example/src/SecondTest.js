@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDimensions } from 'react-hooks-utils'
+import { useDimensions } from 'react-hooks-utilities'
 import styles from './styles.module.css'
 
 const SecondTest = () => {

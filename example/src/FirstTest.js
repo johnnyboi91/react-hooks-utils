@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStateWithCb } from 'react-hooks-utils'
+import { useStateWithCb } from 'react-hooks-utilities'
 import styles from './styles.module.css'
 
 const testCallback = (value) => {

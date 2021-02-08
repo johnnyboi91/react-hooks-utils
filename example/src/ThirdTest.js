@@ -1,5 +1,5 @@
 import React from 'react'
-import { useWindowDimensions } from 'react-hooks-utils'
+import { useWindowDimensions } from 'react-hooks-utilities'
 import styles from './styles.module.css'
 
 const ThirdTest = () => {
