@@ -49,5 +49,13 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "utilities",
+    "utils",
+    "helpers"
   ]
 }
