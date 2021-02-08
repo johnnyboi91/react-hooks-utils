@@ -1,6 +1,6 @@
 {
-  "short_name": "react-hooks-utils",
-  "name": "react-hooks-utils",
+  "short_name": "react-hooks-utilities",
+  "name": "react-hooks-utilities",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://johnnyboi91.github.io/react-hooks-utilities/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
