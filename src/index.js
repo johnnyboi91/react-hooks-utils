@@ -30,10 +30,10 @@ export const useDimensions = () => {
   const ref = useRef()
   const handleResize = () => setState({ ...getDimensions(ref.current) })
   useEffect(() => {
+    window.addEventListener('load', handleResize, false)
     window.addEventListener('resize', handleResize, false)
     return () => window.removeEventListener('resize', handleResize, false)
   }, [])
-  useEffect(() => setState({ ...getDimensions(ref.current) }), [ref])
   return {
     ref,
     ...state
