@@ -75,6 +75,13 @@ function Example() {
 
 Or visit this [link](https://johnnyboi91.github.io/react-hooks-utilities/) for live examples.
 
+## Todo
+
+- [ ] Move to TypeScript.
+- [ ] Write tests.
+- [ ] Update examples page.
+- [ ] More hooks :sunny:
+
 ## License
 
 MIT © [johnnyboi91](https://github.com/johnnyboi91)
