@@ -64,7 +64,7 @@ function Example() {
         breakpoint
     } = useWindowDimensions()
     return (
-        <div ref={ref}>
+        <div>
             <p>Width: {width}px</p>
             <p>Height: {height}px</p>
             <p>Current breakpoint: {breakpoint}</p>
