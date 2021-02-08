@@ -7,8 +7,8 @@ const FourthTest = () => {
   return (
     <div className={styles.component}>
       <h2>useMouseCoordinates example</h2>
-      <p>X: {x}</p>
-      <p>Y: {y}</p>
+      <p>X: {x}px</p>
+      <p>Y: {y}px</p>
     </div>
   )
 }

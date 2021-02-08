@@ -73,6 +73,25 @@ function Example() {
 }
 ```
 
+### useMouseCoordinates:
+```jsx
+import React from 'react'
+import { useMouseCoordinates } from 'react-hooks-utilities'
+
+function Example() {
+    const {
+        x,
+        y
+    } = useMouseCoordinates()
+    return (
+        <div>
+            <p>{x}px</p>
+            <p>{y}px</p>
+        </div>
+    )
+}
+```
+
 Or visit this [link](https://johnnyboi91.github.io/react-hooks-utilities/) for live examples.
 
 ## Todo
