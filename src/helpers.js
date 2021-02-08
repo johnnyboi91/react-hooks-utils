@@ -16,8 +16,8 @@ export const noop = (value) => {}
 export const getDimensions = (el) => {
   const rect = el.getBoundingClientRect()
   return {
-    width: el.clientWidth || rect.width,
-    height: el.clientHeight || rect.height
+    width: rect.width || el.clientWidth,
+    height: rect.height || el.clientHeight
   }
 }
 

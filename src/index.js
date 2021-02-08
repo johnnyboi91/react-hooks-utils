@@ -30,7 +30,7 @@ export const useDimensions = () => {
   const ref = useRef()
   const handleResize = () => setState({ ...getDimensions(ref.current) })
   useEffect(() => {
-    setTimeout(() => setState({ ...getDimensions(ref.current) }), 50)
+    setState({ ...getDimensions(ref.current) })
     window.addEventListener('resize', handleResize, false)
     return () => window.removeEventListener('resize', handleResize, false)
   }, [])
