@@ -1,4 +1,4 @@
-> Just some react hooks utils... (WIP)
+> Just some react hooks utils... More coming soon (WIP).
 
 ## Install
 
