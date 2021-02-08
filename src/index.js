@@ -3,14 +3,15 @@ import {
   noop,
   getCurrentBreakpoint,
   getWindowDimensions,
-  getDimensions
+  getDimensions,
+  getMouseCoordinates
 } from './helpers'
 
 /**
  * useStateWithCb
  * @param {any} value
  * @param {(value: any) => void} callback
- * @return {[any, (value: any) => void]}
+ * @return {any}
  * @since 1.0.0
  */
 export const useStateWithCb = (value, callback = noop) => {
@@ -25,23 +26,11 @@ export const useStateWithCb = (value, callback = noop) => {
  * @since 1.0.0
  */
 export const useDimensions = () => {
-  const ref = useRef()
   const [state, setState] = useState({ width: 0, height: 0 })
-  const handleResize = () => {
-    const dimensions = getDimensions(ref.current)
-    setState((prev) => ({
-      ...prev,
-      width: dimensions.width,
-      height: dimensions.height
-    }))
-  }
+  const ref = useRef()
+  const handleResize = () => setState({ ...getDimensions(ref.current) })
   useEffect(() => {
-    const dimensions = getDimensions(ref.current)
-    setState((prev) => ({
-      ...prev,
-      width: dimensions.width,
-      height: dimensions.height
-    }))
+    setState({ ...getDimensions(ref.current) })
     window.addEventListener('resize', handleResize, false)
     return () => window.removeEventListener('resize', handleResize, false)
   }, [])
@@ -64,25 +53,47 @@ export const useWindowDimensions = () => {
   })
   const handleResize = () => {
     const dimensions = getWindowDimensions()
-    setState((prev) => ({
-      ...prev,
-      width: dimensions.width,
-      height: dimensions.height,
+    setState({
+      ...dimensions,
       breakpoint: getCurrentBreakpoint(dimensions.width)
-    }))
+    })
   }
   useEffect(() => {
     const dimensions = getWindowDimensions()
-    setState((prev) => ({
-      ...prev,
-      width: dimensions.width,
-      height: dimensions.height,
+    setState({
+      ...dimensions,
       breakpoint: getCurrentBreakpoint(dimensions.width)
-    }))
+    })
     window.addEventListener('resize', handleResize, false)
     return () => window.removeEventListener('resize', handleResize, false)
   }, [])
-  return {
-    ...state
-  }
+  return { ...state }
+}
+
+/**
+ * useMouseCoordinates
+ * @return {{x: number, y: number}}
+ * @since 1.0.6
+ */
+export const useMouseCoordinates = () => {
+  const [state, setState] = useState({ x: 0, y: 0 })
+  const handleMove = (e) => setState({ ...getMouseCoordinates(e) })
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMove, false)
+    return () => window.removeEventListener('mousemove', handleMove, false)
+  }, [])
+  return { ...state }
+}
+
+/**
+ * helpers
+ * @type {{noop: noop, getDimensions: (function(HTMLElement): {width: number, height: number}), getCurrentBreakpoint: (function(number): string), getWindowDimensions: (function(): {width: number, height: number}), getMouseCoordinates: (function(MouseEvent): {x: number, y: number})}}
+ * @since 1.0.6
+ */
+export const helpers = {
+  noop,
+  getCurrentBreakpoint,
+  getWindowDimensions,
+  getDimensions,
+  getMouseCoordinates
 }

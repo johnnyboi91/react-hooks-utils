@@ -2,6 +2,7 @@ import React from 'react'
 import FirstTest from './FirstTest'
 import SecondTest from './SecondTest'
 import ThirdTest from './ThirdTest'
+import FourthTest from "./FourthTest";
 import styles from './styles.module.css'
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <FirstTest/>
       <SecondTest/>
       <ThirdTest/>
+      <FourthTest/>
     </div>
   )
 }

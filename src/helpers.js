@@ -4,14 +4,14 @@
  * @param {any} value
  * @since 1.0.0
  */
-export const noop = (value) => {
-}
+export const noop = (value) => {}
 
 /**
  * getDimensions
  * Get element dimensions.
  * @param {HTMLElement} el
  * @return {{width: number, height: number}}
+ * @since 1.0.0
  */
 export const getDimensions = (el) => {
   const rect = el.getBoundingClientRect()
@@ -25,6 +25,7 @@ export const getDimensions = (el) => {
  * getWindowDimensions
  * Get window dimensions.
  * @return {{width: number, height: number}}
+ * @since 1.0.0
  */
 export const getWindowDimensions = () => {
   return {
@@ -43,6 +44,7 @@ export const getWindowDimensions = () => {
  * getCurrentBreakpoint
  * @param {number} width
  * @return {string}
+ * @since 1.0.0
  */
 export const getCurrentBreakpoint = (width) => {
   let breakpoint = 'xlg'
@@ -51,4 +53,26 @@ export const getCurrentBreakpoint = (width) => {
   else if (width < 768 && width > 600) breakpoint = 'sm'
   else if (width < 600) breakpoint = 'xs'
   return breakpoint
+}
+
+/**
+ * getMouseCoordinates
+ * @param {MouseEvent} e
+ * @return {{x: number, y: number}}
+ * @since 1.0.6
+ */
+export const getMouseCoordinates = (e) => {
+  e = e || window.event
+
+  let x = e.pageX
+  let y = e.pageY
+
+  if (x === undefined) {
+    x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft
+    y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop
+  }
+  return {
+    x: x,
+    y: y
+  }
 }
